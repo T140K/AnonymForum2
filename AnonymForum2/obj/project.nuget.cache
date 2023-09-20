@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "g4LAXLzYis7TxzfEOyf3rhpiYmX8uyM1q5AYZm43w9z8kayxkddgM3aXEyomzEPEyidX4I8SrTckUXPyCHJTmA==",
+  "success": true,
+  "projectFilePath": "E:\\VS-Projects\\AnonymForum\\AnonymForum2\\AnonymForum2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Yummi\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

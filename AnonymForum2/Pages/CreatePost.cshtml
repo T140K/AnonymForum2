@@ -1,0 +1,20 @@
+﻿@page
+@model AnonymForum2.Pages.CreatePostModel
+@{
+}
+@*
+    You get FKPost.Id routed as you can only creater a psot from the Post.cshtml file
+*@
+
+<form method="post">
+    <input type="hidden" asp-for="newPost.Fktopic" value="@Model.TopicId"/>
+    <div>
+        <input type="text" asp-for="newPost.Title" placeholder="Titel" />
+    </div>
+    <div>
+        <input asp-for="newPost.Contents" placeholder="Vad tänker du på"
+        style="width:40%"
+        />
+    </div>
+    <button type="submit">Kör</button>
+</form>

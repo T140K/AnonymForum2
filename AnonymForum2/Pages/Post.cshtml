@@ -1,0 +1,50 @@
+﻿@page
+@using AnonymForum2.Models;
+@model PostModel
+@{
+    ViewData["Title"] = "Posts";
+}
+<div>
+    <h1>Läs om @Model.Name</h1>
+    <a asp-page="Index">Tillbakas</a>
+</div>
+<div>
+    <a asp-page="CreatePost" asp-route-TopicId="@Model.Id" asp-route-Name="@Model.Name">Skapa ny diskussion</a>
+</div>
+
+
+
+<div>
+    <table>
+        <tbody>
+        @foreach (var item in ViewData["Posts"] as List<Post>)
+        {
+            <tr>
+            <td>
+                <div style="
+                        border: 2px solid black;
+                        padding: 6px;
+                        margin-bottom: 6px;
+                    ">
+                   <div style="
+                        display:flex;
+                        justify-content: space-between;
+                        font-weight: bold;
+                    ">
+                        <p>@item.Title</p>
+                        <p>@item.TimePosted</p>
+                   </div>
+                   <div style="margin-left: 5px;">
+                        <p>@item.Contents</p>
+                   </div>
+                   <div style="justify-content: space-between; display: flex;">
+                                <a asp-page="Thread" asp-route-OriginalPostId="@item.Id" asp-route-OriginalTopicId="@Model.Id" asp-route-Name="@Model.Name">View thread</a>
+                                <a asp-page="Reply" asp-route-OriginalPostId="@item.Id">Reply</a>
+                   </div>
+                </div>
+            </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
