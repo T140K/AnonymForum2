@@ -2,9 +2,6 @@
 @model AnonymForum2.Pages.CreatePostModel
 @{
 }
-@*
-    You get FKPost.Id routed as you can only creater a psot from the Post.cshtml file
-*@
 
 <form method="post">
     <input type="hidden" asp-for="newPost.Fktopic" value="@Model.TopicId"/>

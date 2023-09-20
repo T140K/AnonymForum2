@@ -3,11 +3,6 @@
 @model AnonymForum2.Pages.ThreadModel
 @{
 }
-@*
-    Here a person will land when clicking on view thread, here only the post will be at the top and all the replys in date order desc below. From here there should be a asp-page="Reply" with the original post id so you can reply from here also
-
-    cookies för att ta post från post.cs till thread.cs så man slipper ny api call
-*@
 
 <a asp-page="Post" asp-route-Id="@Model.OriginalTopicId" asp-route-Name="@Model.Name">Tillbaka</a>
 
