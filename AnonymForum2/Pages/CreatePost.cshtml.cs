@@ -10,8 +10,8 @@ namespace AnonymForum2.Pages
     public class CreatePostModel : PageModel
     {
         [BindProperty(SupportsGet = true)]
-        public int Name { get; set; }
-        [BindProperty]
+        public string Name { get; set; }
+        [BindProperty(SupportsGet = true)]
         public int TopicId { get; set; }
         [BindProperty]
         public Post newPost { get; set; }

@@ -2,6 +2,7 @@
 @model AnonymForum2.Pages.ReplyModel
 @{
 }
+<a asp-page="Post" asp-route-Id="@Model.TopicId" asp-route-Name="@Model.Name">Tillbaka</a>
 
 <form method="post">
     <input type="text" asp-for="replyForm.Contents" placeholder="Skriv ditt svar" />

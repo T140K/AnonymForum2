@@ -11,6 +11,11 @@ namespace AnonymForum2.Pages
     public class ReplyModel : PageModel
     {
         [BindProperty(SupportsGet = true)]
+        public int TopicId { get; set; }
+        [BindProperty(SupportsGet = true)]
+        public string Name { get; set; }
+
+        [BindProperty(SupportsGet = true)]
         public int OriginalPostId { get; set; }
         [BindProperty]
         public Reply replyForm { get; set; }
@@ -41,7 +46,7 @@ namespace AnonymForum2.Pages
 
             if (response.IsSuccessStatusCode)
             {
-                return RedirectToPage("/Thread", new { OriginalPostId = OriginalPostId });
+                return RedirectToPage("/Thread", new { OriginalTopicId = TopicId, Name = Name, OriginalPostId = OriginalPostId });
             }
             return Page();
         }

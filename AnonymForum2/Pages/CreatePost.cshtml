@@ -2,6 +2,7 @@
 @model AnonymForum2.Pages.CreatePostModel
 @{
 }
+<a asp-page="Post" asp-route-Id="@Model.TopicId" asp-route-Name="@Model.Name" asp-route-Name="@Model.Name">Tillbaka</a>
 
 <form method="post">
     <input type="hidden" asp-for="newPost.Fktopic" value="@Model.TopicId"/>
@@ -9,9 +10,7 @@
         <input type="text" asp-for="newPost.Title" placeholder="Titel" />
     </div>
     <div>
-        <input asp-for="newPost.Contents" placeholder="Vad tänker du på"
-        style="width:40%"
-        />
+        <input asp-for="newPost.Contents" placeholder="Vad tänker du på"/>
     </div>
     <button type="submit">Kör</button>
 </form>
